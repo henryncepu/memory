@@ -1,0 +1,5 @@
+t = 3
+for x in range(t):
+    if x ==1:
+        continue
+    print(x)#满足if条件的不输出，输出不满足条件的值
