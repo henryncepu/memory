@@ -3,3 +3,9 @@ for x in range(t):
     if x ==1:
         continue
     print(x)#满足if条件的不输出，输出不满足条件的值
+
+t = 3
+for x in range(t):
+    if x == 1:
+        break
+    print(x)#满足if条件之后的所有操作均停止，输出到条件位置的所有值，后面值均不再输出
