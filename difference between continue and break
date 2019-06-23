@@ -1,11 +1,11 @@
 t = 3
 for x in range(t):
     if x ==1:
-        continue
+        continue   #跳出本次循环，进入下一段循环
     print(x)#不要符合条件的，其他的都要
 
 t = 3
 for x in range(t):
     if x == 1:
-        break
+        break   #结束循环
     print(x)#一直要到符合条件的之前的值，不包括符合条件的
