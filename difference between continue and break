@@ -7,5 +7,5 @@ for x in range(t):
 t = 3
 for x in range(t):
     if x == 1:
-        break   #结束循环
+        break   #结束当前循环
     print(x)#一直要到符合条件的之前的值，不包括符合条件的
