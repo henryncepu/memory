@@ -1,0 +1,4 @@
+list(x for x in range(3))不加调用功能就出不来结果，如下面那个
+>>>[0, 1, 2]
+(x for x in range(3))
+>>><generator object <genexpr> at 0x0000013268AF3CF0>
