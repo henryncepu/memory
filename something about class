@@ -1,3 +1,4 @@
+self 和Java里的this用法一样
 class person():
     def __init__(self,name,gender,**kw):
         self.name=name
