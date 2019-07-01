@@ -1,0 +1,15 @@
+class person():
+    def __init__(self,name,gender,**kw):
+        self.name=name
+        self.gender=gender
+        # self.birth=birth
+        for k,w in kw.items():#
+            setattr(self,k,w)#加入数组进self
+    def sayhi(self):
+        print ('my name is',self.name)
+xiaoming = person('Xiao Ming', 'Male', birth='1991-1-1',job='student')#如果在定义函数的时候没有加上self.birth，又想调用birth ,
+就可以在定义self的时候加上，如在person(***,birth)，但是更为重要的是for循环一个字典，把以birth为key，‘1991-1-1’为value的数组加入self
+xiaohong = person('Xiao Hong', 'Female', birth='1992-2-2')
+print (xiaohong.birth)
+print (xiaoming.job)
+print (xiaoming.sayhi())
