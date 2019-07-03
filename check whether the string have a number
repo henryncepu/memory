@@ -1,0 +1,7 @@
+def tf():
+    s='f_1'
+    if any(i.isdigit() for i in s):
+        return False
+    else:
+        return True
+#print(tf())
