@@ -1,0 +1,10 @@
+x=set('happo')#无序的，去重
+
+
+x=set('happo')
+y=set('happy')
+print(x&y)#取交集{'p', 'a', 'h'}
+
+x=set('happo')
+y=set('happy')
+print(x|y)#并集{'a', 'y', 'o', 'p', 'h'}
