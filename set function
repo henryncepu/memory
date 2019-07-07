@@ -14,3 +14,10 @@ print(x|y)#并集{'a', 'y', 'o', 'p', 'h'}
 x=set('happo')
 y=set('happy')
 print(x-y)# 差集 x-y=x-xy = {'o'}
+
+x=set('happo')
+y=set('happy')
+print(x^y)# 对称差集，在x中或者y中，但是不同时在两个值中
+
+x.add('python')#添加一个新的值，整个加入
+x.update('python')#拆散成元素加入
