@@ -19,10 +19,10 @@ t=sum(randrange(2) for x in range(20))#什么意思
 
 #用生成器可以简单地打印出菲波那切数列
 import sys
-def fibonacci(n):  # 生成器函数 - 斐波那契
+def fibonacci(max):  # 生成器函数 - 斐波那契
     a, b, counter = 0, 1, 0
     while True:
-        if (counter > n):
+        if (counter > max):
             return
         yield a
         a, b = b, a + b
@@ -30,9 +30,10 @@ def fibonacci(n):  # 生成器函数 - 斐波那契
 
 
 f = fibonacci(10)  # f 是一个迭代器，由生成器返回生成
-
+#for i in f:
+ #   print(i,end=' ')这里用for循环或着用while循环都可以
 while True:
-    #print(next(f),end=' ')    print(next(f),end=' ')
+    #print(next(f),end=' ')
 #StopIteration
     try:
         print(next(f), end=" ")
