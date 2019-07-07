@@ -1,8 +1,0 @@
-list(x for x in range(3))不加调用功能就出不来结果，如下面那个
->>>[0, 1, 2]
-(x for x in range(3))
->>><generator object <genexpr> at 0x0000013268AF3CF0>
-t=sum(x for x in range(3))#sum 函数是可迭代函数，因此必须在sum要使用时，用在可迭代函数上
->>>3
-t=sum(randrange(2) for x in range(20))#什么意思
-相当于将randrange(2) 和 for循环出来的值相加吗？为何sum出来的值从来没有到过20 

@@ -1,0 +1,40 @@
+list(x for x in range(3))不加调用功能就出不来结果，如下面那个
+>>>[0, 1, 2]
+(x for x in range(3))
+>>><generator object <genexpr> at 0x0000013268AF3CF0>
+上面的类型为 generator
+
+[x for x in range(3)]
+这种的类型为List
+l = [x for x in range(10)]
+print(l)
+>>>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+这种list型可以直接打印出来结果，不用加迭代函数什么的
+
+t=sum(x for x in range(3))#sum 函数是可迭代函数，因此必须在sum要使用时，用在可迭代函数上
+>>>3
+t=sum(randrange(2) for x in range(20))#什么意思
+相当于一直randrange(2),randrange 20次
+
+
+#用生成器可以简单地打印出菲波那切数列
+import sys
+def fibonacci(n):  # 生成器函数 - 斐波那契
+    a, b, counter = 0, 1, 0
+    while True:
+        if (counter > n):
+            return
+        yield a
+        a, b = b, a + b
+        counter += 1
+
+
+f = fibonacci(10)  # f 是一个迭代器，由生成器返回生成
+
+while True:
+    #print(next(f),end=' ')    print(next(f),end=' ')
+#StopIteration
+    try:
+        print(next(f), end=" ")
+    except StopIteration:
+        sys.exit()
