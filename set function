@@ -8,3 +8,9 @@ print(x&y)#取交集{'p', 'a', 'h'}
 x=set('happo')
 y=set('happy')
 print(x|y)#并集{'a', 'y', 'o', 'p', 'h'}
+
+
+
+x=set('happo')
+y=set('happy')
+print(x-y)# 差集 x-y=x-xy = {'o'}
