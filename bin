@@ -4,3 +4,10 @@ print(bin(t)[2:])
 x = 12
 print(x>>1)
 #x 先转为二进制的值 0000...1100 再向右边移动一位，000...110然后转为十进制才是最终所需的值
+if before ='10100'
+      now =' 1000'
+if(before | now) ==before :
+      return 
+else:
+      before = now
+return before# 如果现在的新值，之前就存在于字符串内，则新值和旧值相同；若 新值之前不在，则新值与旧值不同，将新值赋值给旧值，返回旧值
