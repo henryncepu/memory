@@ -1,4 +1,4 @@
 def fact(n):
     if n == 0: return 1
     return n * fact(n - 1)
-print (fact(5))# n 的阶乘
+print (fact(5))# n 的阶乘 n的最大值不得超过1000
