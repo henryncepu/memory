@@ -2,3 +2,30 @@ def fact(n):
     if n == 0: return 1
     return n * fact(n - 1)
 print (fact(5))# n 的阶乘 n的最大值不得超过1000
+
+###################通过将字符串按照位置的方式，addup1仅正常输出，addup2 把所有数和最右一个拼接； 
+addup3 把所有数和最左一个拼接 ；addup4 把左半边和右半边拼接
+def  add_up1(x,y):
+    return sum(range(x,y+1))
+print (add_up1(1,5))
+
+def add_up2(x,y):
+    if x == y:
+        return x
+    else:
+        return add_up2(x,y-1)+y
+print (add_up2(1,5))
+
+def add_up3(x,y):
+    if x == y:
+        return x
+    else:
+        return x+add_up3(x+1,y)
+print (add_up3(1, 5))
+
+def add_up4(x,y):
+    if x == y:
+        return x
+    else:
+        return add_up4(x,(x+y)//2)+add_up4((x+y)//2+1,y)
+print (add_up4(1, 5))
