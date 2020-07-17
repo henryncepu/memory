@@ -1,0 +1,29 @@
+1)
+if u set : add = lambda x,y :x+y
+it seems as u define a function add , and just input x,y value , u will get the result of x+y
+@input :add(1,2) --> output :3
+2)
+You can also set the value of Lambda to replace the other function ,for example 
+in order to Mock the sleep function of time, 
+@time.sleep = lambda X:None 
+when you execute time.sleep(3), the program will not sleep for 3 seconds ,it will just doing things defined by Lambda
+3)
+You can use Lambda function as the return value of the other function ,return to the caller
+@return lambda x,y : x+y
+at this moment , we regard lambda as function inside another function or internal function
+4)
+use lambda as a parameter to transfer to other function like following:
+>filter : Lambda is used to set the condition to filter the ele in the list 
+filter(lambda x: x%3==0,[1,2,3]) means to filter out the ele in [1,2,3] which can be totally divided by 3
+
+>sorted : Lambda can be used to make a rule for the ele in list to be sorted 
+sorted([1,2,3,4,5,6,7,8,9],key = lambda x: abs(5-x)) means to sort the order as the distance close to 5 
+the result of the above is [5,4,6,3,7,2,8,1,9]
+
+>map : Lambda can be used to assign a same operation inside a list of each ele .
+map(lambda x: x+1,[1,2,3]) means to add each ele in the list with 1 
+the result is [2,3,4]
+
+>reduce : Lambda is used for each two eles which is next to each other.
+reduce(lambda a,b:'{},{}'.format(a,b),[1,2,3,4,5,6,7,8]) 
+the result is '1,2,3,4,5,6,7,8'
